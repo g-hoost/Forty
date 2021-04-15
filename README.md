@@ -1,3 +1,8 @@
+Noch mal zur Erinnerung für die Arbeit mit GitHub:
+
+- Bitte achtet immer darauf, dass Ihr Euch beim Arbeiten in Eurem eigenen Branch befindet.
+- Beim Committen nach Main vorher bitte immer einen Pull Request durchführen, damit Main nicht einfach überschrieben wird.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
