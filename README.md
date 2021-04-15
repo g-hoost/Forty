@@ -2,6 +2,7 @@ Noch mal zur Erinnerung für die Arbeit mit GitHub:
 
 - Bitte achtet immer darauf, dass Ihr Euch beim Arbeiten in Eurem eigenen Branch befindet.
 - Beim Committen nach Main vorher bitte immer einen Pull Request durchführen, damit Main nicht einfach überschrieben wird.
+- Falls Ihr Pakete installiert, schickt kurz rum, welche Pakete es waren. Sonst läuft bei den anderen eventuell der Code nicht. 🦖
 
 # Getting Started with Create React App
 
