@@ -9,7 +9,7 @@ Ihr müsst noch lokal den "master"-branch in main umbenennen, falls das beim Klo
 git branch -m master main\
 git fetch origin\
 git branch -u origin/main main\
-git fetch --prune\
+git fetch --prune
 
 # Getting Started with Create React App
 
