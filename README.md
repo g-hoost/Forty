@@ -4,6 +4,12 @@ Noch mal zur Erinnerung für die Arbeit mit GitHub:
 - Beim Committen nach Main vorher bitte immer einen Pull Request durchführen, damit Main nicht einfach überschrieben wird.
 - Falls Ihr Pakete installiert, schickt kurz rum, welche Pakete es waren. Sonst läuft bei den anderen eventuell der Code nicht. 🦖
 
+Ihr müsst noch lokal den "master"-branch in main umbenennen, falls das beim Klonen des Repository nicht mitgekommen ist:
+
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git fetch --prune
 
 # Getting Started with Create React App
 
