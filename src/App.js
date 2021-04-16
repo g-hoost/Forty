@@ -28,7 +28,6 @@ class App extends Component {
     return (
       <Router>
         <Header />
-        <Footer />
         <Switch>
           <Route path="/upload">
             <DrinkUpload />
@@ -46,6 +45,7 @@ class App extends Component {
             <Homepage />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     );
   }
