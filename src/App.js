@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Component } from "react";
 
 import "./App.css";
-import { getAllCocktails } from "./CocktailAPI";
+import { getAllGinCocktails } from "./CocktailAPI";
 
 import DrinkDetailPage from "./Components/DrinkDetailPage";
 import DrinksPage from "./Components/DrinksPage";
@@ -16,12 +16,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cocktails: [],
+      ginCocktails: [],
     };
   }
 
   componentDidMount() {
-    getAllCocktails().then((result) => this.setState({ cocktails: result }));
+    getAllGinCocktails().then((result) =>
+      this.setState(
+        { ginCocktails: result }
+        //   , () => {
+        //   console.log(this.state.ginCocktails);
+        // }
+      )
+    );
   }
 
   // getCocktail(id) {
@@ -42,8 +49,11 @@ class App extends Component {
           <Route path="/drinks/:id">
             <DrinkDetailPage />
           </Route>
-          <Route path="/drinks">
+          {/* <Route path="/drinks">
             <DrinksPage getAllCocktails={(e) => this.getCocktail(e)} />
+          </Route> */}
+          <Route path="/drinks">
+            <DrinksPage content={this.state.ginCocktails.drinks} />
           </Route>
           <Route path="/">
             <Homepage />

@@ -1,6 +1,6 @@
-export const getAllCocktails = () => {
+export const getAllGinCocktails = () => {
   return fetch(
-    "https://www.thecocktaildb.com/api/json/v1/1/search.php?s"
+    "www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin"
   ).then((res) => res.json());
 };
 
