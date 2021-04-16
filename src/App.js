@@ -5,45 +5,49 @@ import { Component } from "react";
 import "./App.css";
 // import { fetch Namen } from "./CocktailAPI"
 
-import Header from "./Components/Header";
+import DrinkDetailPage from "./Components/DrinkDetailPage";
+import DrinksPage from "./Components/DrinksPage";
+import DrinkUpload from "./Components/DrinkUpload";
 import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Homepage from "./Components/Homepage";
 
 class App extends Component {
-constructor(props) {
-  super(props);
-  this.state = {
-    cocktails: []
+  constructor(props) {
+    super(props);
+    this.state = {
+      cocktails: [],
+    };
   }
-}
 
-// componentDidMount() {
+  // componentDidMount() {
 
-// }
+  // }
 
-render() {
-  return(
-    <Router>
-      <Header />
-      <Footer />
-      <Switch>
-        <Route path="/upload">
-          <DrinkUpload />
-        </Route>
-        <Route path="/drinks/random">
-          <DrinkDetailPage />
-        </Route>
-        <Route path="/drinks/:id">
-          <DrinkDetailPage />
-        </Route>
-        <Route path="/drinks">
-          <DrinksPage />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
-  );
-}
+  render() {
+    return (
+      <Router>
+        <Header />
+        <Footer />
+        <Switch>
+          <Route path="/upload">
+            <DrinkUpload />
+          </Route>
+          <Route path="/drinks/random">
+            <DrinkDetailPage />
+          </Route>
+          <Route path="/drinks/:id">
+            <DrinkDetailPage />
+          </Route>
+          <Route path="/drinks">
+            <DrinksPage />
+          </Route>
+          <Route path="/">
+            <Homepage />
+          </Route>
+        </Switch>
+      </Router>
+    );
+  }
 }
 export default App;
