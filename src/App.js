@@ -1,15 +1,51 @@
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Component } from "react";
 
-import './App.css';
+import "./App.css";
+// import { fetch Namen } from "./CocktailAPI"
 
-function App()
-{
-  return (
-    <div className="App">
-      <h1>Die wahrscheinlich Teletubbies-mäßigste Cocktail-App</h1>
-      <h2>test</h2>
-      <p>gdrtertgergnhz6 6u657nuh7bu 6u6 </p>
-    </div>
-  );
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+
+class App extends Component {
+constructor(props) {
+  super(props);
+  this.state = {
+    cocktails: []
+  }
+}
+
+// componentDidMount() {
+
+// }
+
+render() {
+  return(
+    <Router>
+      <Header />
+      <Footer />
+      <Switch>
+        <Route path="/upload">
+          <DrinkUpload />
+        </Route>
+        <Route path="/drinks/random">
+          <DrinkDetailPage />
+        </Route>
+        <Route path="/drinks/:id">
+          <DrinkDetailPage />
+        </Route>
+        <Route path="/drinks">
+          <DrinksPage />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
+  )
+}
+
 }
 
 export default App;
