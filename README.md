@@ -11,6 +11,9 @@ git fetch origin\
 git branch -u origin/main main\
 git fetch --prune
 
+Den Inhalt des main in meinen lokalen Branch ziehen:
+git pull origin main
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
