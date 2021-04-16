@@ -1,5 +1,3 @@
-// Random Cocktail: www.thecocktaildb.com/api/json/v1/1/random.php
-
 export const getAllCocktails = () => {
   return fetch(
     "https://www.thecocktaildb.com/api/json/v1/1/search.php?s"

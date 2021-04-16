@@ -24,9 +24,9 @@ class App extends Component {
     getAllCocktails().then((result) => this.setState({ cocktails: result }));
   }
 
-  getCocktail(id) {
-    return this.state.cocktail[id];
-  }
+  // getCocktail(id) {
+  //   return this.state.cocktail[id];
+  // }
 
   render() {
     return (
