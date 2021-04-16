@@ -43,9 +43,7 @@ render() {
         </Route>
       </Switch>
     </Router>
-  )
+  );
 }
-
 }
-
 export default App;
