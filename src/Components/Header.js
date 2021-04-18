@@ -1,8 +1,24 @@
+import vector from "../img/vector.png";
+
 const Header = () =>
 {
   return (
 
-    < h1 > Header</h1 >
+    <header>
+      < h3 > FORTY</h3 >
+      < p>MENU</p>
+      <h1>Cocktails & Getränke</h1>
+      <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE!</p>
+      <br></br>
+      <input type="search" name="search" value="type something"></input>
+      <button>Search</button>
+      <div className="headerImgContainer">
+        <img src={vector} alt="three down arrows"></img>
+      </div>
+
+    </header >
+
+
   )
 };
 
