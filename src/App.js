@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Component } from "react";
 
 import "./App.css";
-// import { fetch Namen } from "./CocktailAPI"
+import { getAllCocktails } from "./CocktailAPI";
 
 import DrinkDetailPage from "./Components/DrinkDetailPage";
 import DrinksPage from "./Components/DrinksPage";
@@ -20,8 +20,12 @@ class App extends Component {
     };
   }
 
-  // componentDidMount() {
+  componentDidMount() {
+    getAllCocktails().then((result) => this.setState({ cocktails: result }));
+  }
 
+  // getCocktail(id) {
+  //   return this.state.cocktail[id];
   // }
 
   render() {
@@ -39,7 +43,7 @@ class App extends Component {
             <DrinkDetailPage />
           </Route>
           <Route path="/drinks">
-            <DrinksPage />
+            <DrinksPage getAllCocktails={(e) => this.getCocktail(e)} />
           </Route>
           <Route path="/">
             <Homepage />
