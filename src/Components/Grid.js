@@ -1,30 +1,46 @@
-// import {
-//   getAllGinCocktails,
-//   getAllVodkaCocktails,
-//   getAllRumCocktails,
-//   getAllScotchCocktails,
-//   getAllMocktails,
-//   getRandomCocktail,
-// } from "./CocktailAPI";
+import {
+  getAllDrinksByCategory,
+  //   getAllVodkaCocktails,
+  //   getAllRumCocktails,
+  //   getAllScotchCocktails,
+  //   getAllMocktails,
+  //   getRandomCocktail,
+} from "./../CocktailAPI.js";
+
+import { Component } from "react";
+import MainTile from "./MainTile";
+import { withRouter } from "react-router";
 
 class Grid extends Component {
   constructor(props) {
     super(props);
+    console.log(props.content);
     this.state = {
-      drinks: [],
+      items: [],
     };
   }
 
   componentDidMount() {
-    //   getAllGinCocktails().then((result) => this.setState({ gin: result }));
-    //   getAllVodkaCocktails().then((result) => this.setState({ vodka: result }));
-    //   getAllRumCocktails().then((result) => this.setState({ rum: result }));
-    //   getAllScotchCocktails().then((result) => this.setState({ scotch: result }));
-    //   getAllMocktails().then((result) => this.setState({ mocktails: result }));
+    if (this.props.content) {
+      // Hier Getränke Array in items packen
+    } else {
+      const urlCategory = this.props.match.params.category;
+
+      getAllDrinksByCategory(urlCategory).then((result) =>
+        this.setState({ items: result })
+      );
+    }
   }
 
   render() {
-    return <h1>Grid</h1>;
+    return (
+      <>
+        {this.props.content.categories &&
+          this.props.content.categories.map((categorie, index) => (
+            <MainTile key={index} name={categorie} />
+          ))}
+      </>
+    );
   }
 }
-export default Grid;
+export default withRouter(Grid);
