@@ -9,6 +9,7 @@ import {
 
 import { Component } from "react";
 import MainTile from "./MainTile";
+import DrinkTile from "./DrinkTile";
 import { withRouter } from "react-router";
 
 class Grid extends Component {
@@ -22,12 +23,12 @@ class Grid extends Component {
 
   componentDidMount() {
     if (this.props.content) {
-      // Hier Getränke Array in items packen
+      this.setState({ items: this.props.content });
     } else {
       const urlCategory = this.props.match.params.category;
 
       getAllDrinksByCategory(urlCategory).then((result) =>
-        this.setState({ items: result })
+        this.setState({ items: result.drinks })
       );
     }
   }
@@ -35,9 +36,16 @@ class Grid extends Component {
   render() {
     return (
       <>
-        {this.props.content.categories &&
-          this.props.content.categories.map((categorie, index) => (
-            <MainTile key={index} name={categorie} />
+        {this.state.items &&
+          this.state.items.map((categorie, index) => (
+            <div key={index}>
+              {categorie.strDrink ? (
+                <DrinkTile key={index} name={categorie.strDrink} />
+              ) : (
+                <MainTile key={index} name={categorie} />
+              )}
+              {/* <h3>{categorie}</h3> */}
+            </div>
           ))}
       </>
     );

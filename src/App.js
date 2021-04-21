@@ -9,8 +9,8 @@ import DrinkUpload from "./Components/DrinkUpload";
 import Footer from "./Components/Footer";
 import Grid from "./Components/Grid";
 import Header from "./Components/Header";
-import Homepage from "./Components/Homepage";
-import DrinkTile from "./Components/DrinkTile";
+// import Homepage from "./Components/Homepage";
+// import DrinkTile from "./Components/DrinkTile";
 
 class App extends Component {
   constructor(props) {
@@ -35,10 +35,10 @@ class App extends Component {
             <DrinkDetailPage />
           </Route>
           <Route path="/:category">
-            <Grid />
+            <Grid key={1} />
           </Route>
-          <Route path="/">
-            <Grid content={this.state.categories} />
+          <Route exact path="/">
+            <Grid key={2} content={this.state.categories} />
           </Route>
         </Switch>
         <Footer />
