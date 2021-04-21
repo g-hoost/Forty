@@ -18,7 +18,6 @@ class DrinkDetailPage extends Component {
       positionOfSlash,
       lenghtOfUrl
     );
-    console.log(idDrink);
     getDrinkInfos(idDrink).then((result) =>
       this.setState({ item: result.drinks[0] })
     );
@@ -30,7 +29,54 @@ class DrinkDetailPage extends Component {
         <img src={this.state.item.strDrinkThumb} alt="" />
         <h2>{this.state.item.strDrink}</h2>
         <h3>Zutaten</h3>
-        <p>{this.state.item.strIngredient1}</p>
+        <ul>
+          {this.state.item.strIngredient1 && (
+            <li>{this.state.item.strIngredient1}</li>
+          )}
+          {this.state.item.strIngredient2 && (
+            <li>{this.state.item.strIngredient2}</li>
+          )}
+          {this.state.item.strIngredient3 && (
+            <li>{this.state.item.strIngredient3}</li>
+          )}
+          {this.state.item.strIngredient4 && (
+            <li>{this.state.item.strIngredient4}</li>
+          )}
+          {this.state.item.strIngredient5 && (
+            <li>{this.state.item.strIngredient5}</li>
+          )}
+          {this.state.item.strIngredient6 && (
+            <li>{this.state.item.strIngredient6}</li>
+          )}
+          {this.state.item.strIngredient7 && (
+            <li>{this.state.item.strIngredient7}</li>
+          )}
+          {this.state.item.strIngredient8 && (
+            <li>{this.state.item.strIngredient8}</li>
+          )}
+          {this.state.item.strIngredient9 && (
+            <li>{this.state.item.strIngredient9}</li>
+          )}
+          {this.state.item.strIngredient10 && (
+            <li>{this.state.item.strIngredient10}</li>
+          )}
+          {this.state.item.strIngredient11 && (
+            <li>{this.state.item.strIngredient11}</li>
+          )}
+          {this.state.item.strIngredient12 && (
+            <li>{this.state.item.strIngredient12}</li>
+          )}
+          {this.state.item.strIngredient13 && (
+            <li>{this.state.item.strIngredient13}</li>
+          )}
+          {this.state.item.strIngredient14 && (
+            <li>{this.state.item.strIngredient14}</li>
+          )}
+          {this.state.item.strIngredient15 && (
+            <li>{this.state.item.strIngredient15}</li>
+          )}
+        </ul>
+        <p>{this.state.item.strInstructionsDE}</p>
       </>
     );
   }

@@ -28,7 +28,7 @@ class App extends Component {
           <Route path="/upload">
             <DrinkUpload />
           </Route>
-          <Route path="/drinks/random">
+          <Route path="/randomdrink">
             <DrinkDetailPage />
           </Route>
           <Route path="/:category/:id">
