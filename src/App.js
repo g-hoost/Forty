@@ -31,7 +31,7 @@ class App extends Component {
           <Route path="/drinks/random">
             <DrinkDetailPage />
           </Route>
-          <Route path="/drinks/:id">
+          <Route path="/:category/:id">
             <DrinkDetailPage />
           </Route>
           <Route path="/:category">
