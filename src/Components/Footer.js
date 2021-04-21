@@ -3,21 +3,9 @@ const Footer = () =>
   return
   (
     <footer>
-      <h3> FORTY</h3>
-      <p>MENU</p>
-      <h1>Cocktails & Getränke</h1>
-      <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE!</p>
-      <br></br>
-      <input
-        type="search"
-        name="search"
-        value="type something"
-      // onChange={this.handleChange}
-      ></input>
-      <button>Search</button>
-      <div className="headerImgContainer">
-        <img src={vector} alt="three down arrows"></img>
-      </div>
+      <h3> Genuss hat viele Facetten...</h3>
+      <p>..aber ohne das richtige Maß geht es nicht!
+          Cocktails kann man mit allen Sinnen genießen. Zum Cocktail-Genuss gehören neben dem Geschmack natürlich auch die Optik, die Farbe und die verschiedenen Aromen, die im Zusammenspiel ganz neue Assoziationen wecken und unterbewusst auch den Geschmack beeinflussen. </p>
     </footer>
   )
 
