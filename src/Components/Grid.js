@@ -1,11 +1,4 @@
-import {
-  getAllDrinksByCategory,
-  //   getAllVodkaCocktails,
-  //   getAllRumCocktails,
-  //   getAllScotchCocktails,
-  //   getAllMocktails,
-  //   getRandomCocktail,
-} from "./../CocktailAPI.js";
+import { getAllDrinksByCategory } from "./../CocktailAPI.js";
 
 import { Component } from "react";
 import MainTile from "./MainTile";
@@ -15,7 +8,6 @@ import { withRouter } from "react-router";
 class Grid extends Component {
   constructor(props) {
     super(props);
-    console.log(props.content);
     this.state = {
       items: [],
     };
@@ -40,11 +32,10 @@ class Grid extends Component {
           this.state.items.map((categorie, index) => (
             <div key={index}>
               {categorie.strDrink ? (
-                <DrinkTile key={index} name={categorie.strDrink} />
+                <DrinkTile key={index} content={categorie} />
               ) : (
                 <MainTile key={index} name={categorie} />
               )}
-              {/* <h3>{categorie}</h3> */}
             </div>
           ))}
       </>
