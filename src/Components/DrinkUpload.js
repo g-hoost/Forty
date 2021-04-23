@@ -17,7 +17,7 @@ const DrinkUpload = () =>
         <input type="text" value="Menge Zutat 2" placeholder="Menge Zutat 2" />
         <input type="text" value="Zutat 3" placeholder="Zutat 3" />
         <input type="text" value="Menge Zutat 3" placeholder="Menge Zutat 3" />
-        <input type="submit" />
+        <input type="submit" value="Submit" placeholder="Submit/>
       </form>
     </article>
   )
