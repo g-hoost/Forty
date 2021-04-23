@@ -12,18 +12,15 @@ import Header from "./Components/Header";
 // import Homepage from "./Components/Homepage";
 // import DrinkTile from "./Components/DrinkTile";
 
-class App extends Component
-{
-  constructor(props)
-  {
+class App extends Component {
+  constructor(props) {
     super(props);
     this.state = {
-      categories: ["Gin", "Vodka", "Rum", "Scotch", "Alkoholfrei"],
+      categories: ["Gin", "Vodka", "Rum", "Scotch", "Alkoholfrei", "Zufall"],
     };
   }
 
-  render()
-  {
+  render() {
     return (
       <Router>
         <Header />
