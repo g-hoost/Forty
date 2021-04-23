@@ -1,0 +1,20 @@
+/* MAIN TILES */
+
+.sort:nth-child(1) {
+  @apply bg-light-blue;
+}
+.sort:nth-child(2) {
+  @apply bg-purple;
+}
+.sort:nth-child(3) {
+  @apply bg-red;
+}
+.sort:nth-child(4) {
+  @apply bg-yellow;
+}
+.sort:nth-child(5) {
+  @apply bg-violet;
+}
+.sort:nth-child(6) {
+  @apply bg-green;
+}

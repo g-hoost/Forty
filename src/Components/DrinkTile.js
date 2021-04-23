@@ -7,7 +7,7 @@ const DrinkTile = (props) =>
 
   return (
     <Link to={`${currentURL}/${props.content.idDrink}`}>
-      <div>
+      <div className="bg-blue-500">
         <h2>{props.content.strDrink}</h2>
         <img src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
       </div>
