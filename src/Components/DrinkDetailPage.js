@@ -1,33 +1,34 @@
 import { Component } from "react";
-import { getDrinkInfos } from "./../CocktailAPI";
-import { useParams } from "react-router-dom";
+import { getDrinkInfos, getRandomCocktail } from "./../CocktailAPI";
 
-class DrinkDetailPage extends Component
-{
-  constructor(props)
-  {
+class DrinkDetailPage extends Component {
+  constructor(props) {
     super(props);
     this.state = {
       item: {},
     };
   }
 
-  componentDidMount()
-  {
-    let positionOfSlash =
-      window.location.pathname.substring(1).indexOf("/") + 2;
-    const lenghtOfUrl = window.location.pathname.substring(1).length + 2;
-    const idDrink = window.location.pathname.slice(
-      positionOfSlash,
-      lenghtOfUrl
-    );
-    getDrinkInfos(idDrink).then((result) =>
-      this.setState({ item: result.drinks[0] })
-    );
+  componentDidMount() {
+    if (window.location.pathname == "/Zufall") {
+      getRandomCocktail().then((result) =>
+        this.setState({ item: result.drinks[0] })
+      );
+    } else {
+      let positionOfSlash =
+        window.location.pathname.substring(1).indexOf("/") + 2;
+      const lenghtOfUrl = window.location.pathname.substring(1).length + 2;
+      const idDrink = window.location.pathname.slice(
+        positionOfSlash,
+        lenghtOfUrl
+      );
+      getDrinkInfos(idDrink).then((result) =>
+        this.setState({ item: result.drinks[0] })
+      );
+    }
   }
 
-  render()
-  {
+  render() {
     return (
       <section>
         <img src={this.state.item.strDrinkThumb} alt="" />
