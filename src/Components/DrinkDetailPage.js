@@ -2,15 +2,18 @@ import { Component } from "react";
 import { getDrinkInfos } from "./../CocktailAPI";
 import { useParams } from "react-router-dom";
 
-class DrinkDetailPage extends Component {
-  constructor(props) {
+class DrinkDetailPage extends Component
+{
+  constructor(props)
+  {
     super(props);
     this.state = {
       item: {},
     };
   }
 
-  componentDidMount() {
+  componentDidMount()
+  {
     let positionOfSlash =
       window.location.pathname.substring(1).indexOf("/") + 2;
     const lenghtOfUrl = window.location.pathname.substring(1).length + 2;
@@ -23,9 +26,10 @@ class DrinkDetailPage extends Component {
     );
   }
 
-  render() {
+  render()
+  {
     return (
-      <>
+      <section>
         <img src={this.state.item.strDrinkThumb} alt="" />
         <h2>{this.state.item.strDrink}</h2>
         <h3>Zutaten</h3>
@@ -77,7 +81,7 @@ class DrinkDetailPage extends Component {
           )}
         </ul>
         <p>{this.state.item.strInstructionsDE}</p>
-      </>
+      </section>
     );
   }
 }
