@@ -26,27 +26,25 @@ class App extends Component
   {
     return (
       <Router>
-        <div className="App">
+        <Header />
+        <Switch>
+          <Route path="/upload">
+            <DrinkUpload />
+          </Route>
+          <Route path="/randomdrink">
+            <DrinkDetailPage />
+          </Route>
+          <Route path="/:category/:id">
+            <DrinkDetailPage />
+          </Route>
+          <Route path="/:category">
+            <Grid key={1} />
+          </Route>
+          <Route exact path="/">
+            <Grid key={2} content={this.state.categories} />
+          </Route>
+        </Switch>
 
-          <Header />
-          <Switch>
-            <Route path="/upload">
-              <DrinkUpload />
-            </Route>
-            <Route path="/drinks/random">
-              <DrinkDetailPage />
-            </Route>
-            <Route path="/drinks/:id">
-              <DrinkDetailPage />
-            </Route>
-            <Route path="/:category">
-              <Grid key={1} />
-            </Route>
-            <Route exact path="/">
-              <Grid key={2} content={this.state.categories} />
-            </Route>
-          </Switch>
-        </div>
         <Footer />
       </Router>
     );
