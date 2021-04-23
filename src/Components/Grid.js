@@ -31,10 +31,10 @@ class Grid extends Component
   render()
   {
     return (
-      <section>
+      <section  className="md:flex md:flex-wrap md:inline-block">
         {this.state.items &&
           this.state.items.map((categorie, index) => (
-              <div className="sort h-80
+              <div className="sort h-80 
               md:w-1/2 " 
               key={index}>
                 {categorie.strDrink ? (
