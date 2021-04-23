@@ -9,8 +9,7 @@ import DrinkUpload from "./Components/DrinkUpload";
 import Footer from "./Components/Footer";
 import Grid from "./Components/Grid";
 import Header from "./Components/Header";
-// import Homepage from "./Components/Homepage";
-// import DrinkTile from "./Components/DrinkTile";
+import Menu from "./Components/Menu";
 
 class App extends Component {
   constructor(props) {
@@ -23,12 +22,13 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <Menu />
         <Header />
         <Switch>
           <Route path="/upload">
             <DrinkUpload />
           </Route>
-          <Route path="/randomdrink">
+          <Route path="/Zufall">
             <DrinkDetailPage />
           </Route>
           <Route path="/:category/:id">

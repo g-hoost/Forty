@@ -9,3 +9,9 @@ export const getDrinkInfos = (id) => {
     `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
   ).then((res) => res.json());
 };
+
+export const getRandomCocktail = () => {
+  return fetch(
+    `https://www.thecocktaildb.com/api/json/v1/1/random.php`
+  ).then((res) => res.json());
+};
