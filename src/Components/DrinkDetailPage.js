@@ -33,6 +33,7 @@ class DrinkDetailPage extends Component
         <img src={this.state.item.strDrinkThumb} alt="" />
         <h2>{this.state.item.strDrink}</h2>
         <h3>Zutaten</h3>
+        <p>{this.state.item.idDrink}</p>
         <ul>
           {this.state.item.strIngredient1 && (
             <li>{this.state.item.strIngredient1}</li>
