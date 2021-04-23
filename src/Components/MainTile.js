@@ -4,9 +4,9 @@ const MainTile = (props) =>
 {
   return (
     <Link to={`/${props.name}`}>
-        <section >
-          <h1 className="">{props.name}</h1>
-          <p>LOREM BLA BLA</p>
+        <section className="pt-28 pl-12">
+          <h1 className="font-secondary text-5xl font-bold">{props.name}</h1>
+          <p className="leading-5	">LOREM BLA BLA</p>
         </section>
     </Link>
   );

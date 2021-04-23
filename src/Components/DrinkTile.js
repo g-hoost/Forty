@@ -7,9 +7,9 @@ const DrinkTile = (props) =>
 
   return (
     <Link to={`${currentURL}/${props.content.idDrink}`}>
-      <div>
+      <div className="flex flex-row-reverse">
         <h2>{props.content.strDrink}</h2>
-        <img src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
+        <img className="w-60 pl-12" src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
       </div>
     </Link>
   );
