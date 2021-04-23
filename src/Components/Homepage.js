@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 
-const Homepage = () => {
+const Homepage = () =>
+{
   return (
     <main>
-      <Link to="/gin">
-        <h2>Gin</h2>
-        <p>lorem bla bla </p>
-      </Link>
-      <Link to="/vodka">
-        <h2>Vodka</h2>
-        <p>lorem bla bla </p>
-      </Link>
+
+      <h2>Gin</h2>
+      <p>lorem bla bla </p>
+
+      <h2>Vodka</h2>
+      <p>lorem bla bla </p>
+
     </main>
   );
 };
