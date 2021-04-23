@@ -40,7 +40,7 @@ class Grid extends Component
               ) : (
                 <MainTile key={index} name={categorie} />
               )}
-              <p>LOREM BLA BLA </p>
+
             </div>
           ))}
       </section>
