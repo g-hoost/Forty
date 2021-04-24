@@ -1,4 +1,7 @@
-import { getAllDrinksByCategory } from "./../CocktailAPI.js";
+import {
+  getAllDrinksByCategory,
+  searchNonAlcoholiCocktail,
+} from "./../CocktailAPI.js";
 
 import { Component } from "react";
 import MainTile from "./MainTile";
@@ -15,11 +18,15 @@ class Grid extends Component {
   }
 
   componentDidMount() {
+    const urlCategory = this.props.match.params.category;
+
     if (this.props.content) {
       this.setState({ items: this.props.content });
+    } else if (urlCategory == "Alkoholfrei") {
+      searchNonAlcoholiCocktail().then((result) =>
+        this.setState({ items: result.drinks })
+      );
     } else {
-      const urlCategory = this.props.match.params.category;
-
       getAllDrinksByCategory(urlCategory).then((result) =>
         this.setState({ items: result.drinks })
       );
@@ -29,29 +36,27 @@ class Grid extends Component {
         .then((res) => {
           res.docs.forEach((drink) => {
             this.setState({
-              items: [...this.state.items, drink.data().strDrink],
+              items: [...this.state.items, drink.data()],
             });
           });
         });
     }
-
-    // -----------IEMS AUS DER COLLECTION HOLE UND IN STATE SPEICHERN
   }
 
   render() {
     return (
       <section className="md:flex md:flex-wrap">
         {this.state.items &&
-          this.state.items.map((categorie, index) => (
+          this.state.items.map((item, index) => (
             <div
               className="sort h-80 content-center flex direction
               md:w-1/2"
               key={index}
             >
-              {categorie.strDrink ? (
-                <DrinkTile key={index} content={categorie} index={index} />
+              {item.strDrink ? (
+                <DrinkTile key={index} content={item} index={index} />
               ) : (
-                <MainTile key={index} name={categorie} />
+                <MainTile key={index} name={item} />
               )}
             </div>
           ))}
