@@ -7,11 +7,10 @@ const DrinkTile = (props) =>
   
   return (
     <Link className="md:flex md:flex-wrap md:inline-block" to={`${currentURL}/${props.content.idDrink}`}>
-        <div className="flex h-full items-center">
-          <h2 className="transform -rotate-90 font-bold text-2xl w-full">{props.content.strDrink}</h2>
+        <div className="flex h-full items-center justify-evenly">
+          <h2 className="transform -rotate-90 font-bold text-2xl">{props.content.strDrink}</h2>
           <img className="w-60 p-6 object-contain" src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
         </div>
-
     </Link>
   );
 };
