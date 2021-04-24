@@ -1,4 +1,4 @@
-/* MAIN TILES */
+/* BG-COLORING*/
 
 .sort:nth-child(6n-5),
 .upload-input:nth-child(6n-5) {
@@ -25,14 +25,17 @@
   @apply bg-green;
 }
 
+/* DrinkTiles */
 .direction:nth-child(odd) {
   flex-direction: row-reverse;
 }
 .direction:nth-child(even) {
   flex-direction: row;
 }
-
+/* Upload */
 .upload-input {
-  @apply block mb-4 px-2 py-1 w-full
-  ;
+  @apply block mb-4 px-2 py-1 w-full;
+}
+input::placeholder {
+  @apply text-white;
 }
