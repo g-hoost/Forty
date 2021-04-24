@@ -28,9 +28,9 @@ class App extends Component {
         <Switch>
           <Route path="/upload">
             <DrinkUpload />
-            <Route path="/search/:searchTerm">
-              <Grid />
-            </Route>
+          </Route>
+          <Route path="/search/:searchTerm">
+            <Grid key={3} />
           </Route>
           <Route path="/Zufall">
             <DrinkDetailPage />
