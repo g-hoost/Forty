@@ -3,41 +3,56 @@ import { Link } from "react-router-dom";
 import { searchCocktail } from "../CocktailAPI";
 import axios from "axios";
 
-const Searchbar = () =>
-{
-  const [term, setTerm] = useState("");
-  const [results, setResults] = useState([])
+const Searchbar = () => {
+  let textInput = React.createRef();
 
-  useEffect(() =>
-  {
-    const search = async (e) =>
-    {
-      e.preventDefault();
-      const { data } = await axios.get(searchCocktail)
-      setResults(data)
-    }
+  const submitSearch = (event) => {
+    event.preventDefault();
 
-    if (term) {
-      search()
-    }
-  }, [term])
+    console.log(textInput.current.value);
+  };
 
+  // const [term, setTerm] = useState("");
+  // const [results, setResults] = useState([])
+
+  // useEffect(() =>
+  // {
+  //   const search = async (e) =>
+  //   {
+  //     e.preventDefault();
+  //     const { data } = await axios.get(searchCocktail)
+  //     setResults(data)
+  //   }
+
+  //   if (term) {
+  //     search()
+  //   }
+  // }, [term])
 
   return (
     <article>
       <form>
-        <input className="bg-white rounded-lg  text-center py-2"
+        <input
+          className="bg-white rounded-lg  text-center py-2"
           type="text"
           name="search"
           placeholder="type drink name"
           size="15"
+          ref={textInput}
         ></input>
-        <Link to="/search"><button onClick={e => setTerm(e.target.value)} className="bg-light-blue rounded-lg px-2 py-2 ml-4">Search</button></Link>
+        {/* <Link to={`/search/${textInput.current.value}`}> */}
+        <button
+          onClick={(e) => submitSearch(e)}
+          className="bg-light-blue rounded-lg px-2 py-2 ml-4"
+        >
+          Search
+        </button>
+        {/* </Link> */}
       </form>
     </article>
-  )
-}
-export default Searchbar
+  );
+};
+export default Searchbar;
 
 //   useEffect(() =>
 //   {
@@ -47,7 +62,6 @@ export default Searchbar
 //     }
 //     setResults(data)
 //   }
-
 
 //   return (
 //     <article>
@@ -84,7 +98,6 @@ export default Searchbar
 //   render()
 //   {
 //     const { items } = this.state;
-
 
 //     return (
 //       <article>
@@ -125,7 +138,6 @@ export default Searchbar
 //       console.log(result)
 //     );
 //   }
-
 
 // return (
 //   <article>
