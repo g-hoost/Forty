@@ -1,6 +1,7 @@
 const DrinkUpload = () =>
 {
   return (
+
     <article className="bg-dark-blue text-white p-12 text-center
     lg:text-left">
       <h1 className="font-secondary font-bold text-2xl mb-8

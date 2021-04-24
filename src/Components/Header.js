@@ -5,10 +5,10 @@ const Header = () =>
 {
   return (
     <header className="bg-dark-blue p-3">
-      <navbar className="text-sm flex justify-between">
+      <article className="text-sm flex justify-between">
         <h3 className="font-secondary uppercase"> Forty</h3>
         <p className="uppercase">Menu</p>
-      </navbar>
+      </article>
       <section className="mt-24 ml-12 text-left">
         <h1 className="font-secondary text-5xl">Cocktails & Getränke</h1>
         <p className="text-xs uppercase mt-2">Herzlich Willkommen in der Welt der Cocktails und Getränke!</p>
