@@ -23,18 +23,19 @@ class Grid extends Component {
       getAllDrinksByCategory(urlCategory).then((result) =>
         this.setState({ items: result.drinks })
       );
+
+      db.collection("gin")
+        .get()
+        .then((res) => {
+          res.docs.forEach((drink) => {
+            this.setState({
+              items: [...this.state.items, drink.data().strDrink],
+            });
+          });
+        });
     }
 
     // -----------IEMS AUS DER COLLECTION HOLE UND IN STATE SPEICHERN
-    db.collection("drinks")
-      .get()
-      .then((res) => {
-        res.docs.forEach((drink) => {
-          this.setState({
-            items: [...this.state.items, drink.data().strDrink],
-          });
-        });
-      });
   }
 
   render() {
