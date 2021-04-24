@@ -26,10 +26,7 @@ class Grid extends Component {
       searchNonAlcoholiCocktail().then((result) =>
         this.setState({ items: result.drinks })
       );
-      // console.log("Alkoholfrei");
     } else {
-      // const urlCategory = this.props.match.params.category;
-
       getAllDrinksByCategory(urlCategory).then((result) =>
         this.setState({ items: result.drinks })
       );
@@ -44,8 +41,6 @@ class Grid extends Component {
           });
         });
     }
-
-    // -----------IEMS AUS DER COLLECTION HOLE UND IN STATE SPEICHERN
   }
 
   render() {
