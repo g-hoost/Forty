@@ -1,6 +1,7 @@
 import { Component } from "react";
 import React from "react";
-// import DrinkDetailPage from "./Components/DrinkDetailPage";
+import { Link } from "react-router-dom";
+import { searchCocktail } from "./../CocktailAPI";
 
 class Searchbar extends Component
 {
@@ -9,15 +10,16 @@ class Searchbar extends Component
   }
   searchDrink = (event) =>
   {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
+    searchCocktail(urlCategory).then((result) =>
+      this.setState({ [event.target.name]: event.target.value })
+      // this.setState({
+      //   [event.target.name]: event.target.value
+    )
   }
   submitSearch = (event) =>
   {
     event.preventDefault();
     console.log(event.target[0].value);
-    // this.props.filterBySearchTerm(this.state.searchTerm)
     this.setState({ Term: "" })
   }
   render()
@@ -30,9 +32,9 @@ class Searchbar extends Component
             name="search"
             placeholder="type drink name"
             size="15"
-          // onChange={(e) => this.setKeyword(e.target.value)}
+            onChange={(e) => this.submitSearch(e.target.value)}
           ></input>
-          <button className="bg-light-blue rounded-lg px-2 py-2 ml-4">Search</button>
+          <Link to="/search"><button className="bg-light-blue rounded-lg px-2 py-2 ml-4">Search</button></Link>
         </form>
       </article>
     );
