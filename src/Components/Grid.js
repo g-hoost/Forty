@@ -49,7 +49,7 @@ class Grid extends Component {
         {this.state.items &&
           this.state.items.map((item, index) => (
             <div
-              className="sort h-80 content-center flex
+              className="sort h-80 content-center flex direction
               md:w-1/2"
               key={index}
             >

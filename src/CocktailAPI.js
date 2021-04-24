@@ -18,7 +18,7 @@ export const getRandomCocktail = () => {
 
 export const searchCocktail = (searchTerm) => {
   return fetch(
-    `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${searchTerm}`
+    `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`
   ).then((res) => res.json());
 };
 
