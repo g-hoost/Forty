@@ -26,13 +26,19 @@
 }
 
 /* DrinkTiles */
-.direction:nth-child(odd) h2,
-.direction:nth-child(odd) img {
+
+.direction:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.direction:nth-child(even) {
+  flex-direction: row;
+}
+
+.direction:nth-child(odd) div {
   flex-direction: row-reverse;
 }
 
-.direction:nth-child(even) h2,
-.direction:nth-child(even) img {
+.direction:nth-child(even) div {
   flex-direction: row;
 }
 
