@@ -1,11 +1,11 @@
 import vector from "../img/vector.png";
 import Searchbar from "./Searchbar";
-import Link from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 const Header = () =>
 {
-  const openNav = () {
+  const openNav = () => {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("header").style.marginLeft = "250px";
   }
