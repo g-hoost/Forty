@@ -30,10 +30,17 @@ class DrinkDetailPage extends Component {
 
   render() {
     return (
-      <section>
-        <img src={this.state.item.strDrinkThumb} alt="" />
-        <h2>{this.state.item.strDrink}</h2>
-        <h3>Zutaten</h3>
+      <section className="bg-dark-blue p-10
+                          md:flex md:gap-12">
+        <img className="w-4/6 block mx-auto
+                        md:w-1/2" 
+                        src={this.state.item.strDrinkThumb} alt="" />
+        <div classname="md:block">
+          <h2 className="font-secondary font-bold text-3xl text-center py-8
+                        md:text-left">
+                        {this.state.item.strDrink}</h2>
+          <h3 className="font-bold my-4">Zutaten</h3>
+        
         <ul>
           {this.state.item.strIngredient1 && (
             <li>{this.state.item.strIngredient1}</li>
@@ -81,7 +88,8 @@ class DrinkDetailPage extends Component {
             <li>{this.state.item.strIngredient15}</li>
           )}
         </ul>
-        <p>{this.state.item.strInstructionsDE}</p>
+        <p className="pt-6">{this.state.item.strInstructionsDE}</p>
+        </div>
       </section>
     );
   }
