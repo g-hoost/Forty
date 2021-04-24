@@ -1,3 +1,7 @@
+import image9 from './../img/image9.png';
+import image10 from './../img/image10.png';
+import image11 from './../img/image11.png';
+
 const DrinkUpload = () =>
 {
   return (
@@ -23,9 +27,9 @@ const DrinkUpload = () =>
           <input className="bg-light-blue text-white font-bold mt-2 py-2 px-20 rounded-2xl w-full" type="submit" placeholder="Submit" />
         </form>
         <div className="md:w-3/4 md:relative">
-          <img className="hidden md:block absolute top-0 w-72	" src="./../img/image9.png" alt="" />
-          <img className="hidden" src="./../img/image10.png" alt="" />
-          <img className="hidden" src="./../img/image11.png" alt="" />
+          <img className="hidden md:block absolute w-2/6 left-12 top-4 " src={image9} alt="" />
+          <img className="hidden md:block absolute w-4/12 right-0 object-contain top-8 right-0" src={image10} alt="" />
+          <img className="hidden md:block absolute w-72 left-12 bottom-8" src={image11} alt="" />
         </div>
       </section>
     </article>
