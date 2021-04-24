@@ -26,16 +26,20 @@
 }
 
 /* DrinkTiles */
-.direction:nth-child(odd) {
+.direction:nth-child(odd) h2,
+.direction:nth-child(odd) img {
   flex-direction: row-reverse;
 }
-.direction:nth-child(even) {
+
+.direction:nth-child(even) h2,
+.direction:nth-child(even) img {
   flex-direction: row;
 }
+
 /* Upload */
 .upload-input {
   @apply block mb-4 px-2 py-1 w-full;
 }
 input::placeholder {
-  @apply text-white;
+  @apply text-dark-blue;
 }
