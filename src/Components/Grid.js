@@ -4,19 +4,17 @@ import { Component } from "react";
 import MainTile from "./MainTile";
 import DrinkTile from "./DrinkTile";
 import { withRouter } from "react-router";
+import db from "./../services/firebase";
 
-class Grid extends Component
-{
-  constructor(props)
-  {
+class Grid extends Component {
+  constructor(props) {
     super(props);
     this.state = {
       items: [],
     };
   }
 
-  componentDidMount()
-  {
+  componentDidMount() {
     if (this.props.content) {
       this.setState({ items: this.props.content });
     } else {
@@ -26,23 +24,35 @@ class Grid extends Component
         this.setState({ items: result.drinks })
       );
     }
+
+    // -----------IEMS AUS DER COLLECTION HOLE UND IN STATE SPEICHERN
+    db.collection("drinks")
+      .get()
+      .then((res) => {
+        res.docs.forEach((drink) => {
+          this.setState({
+            items: [...this.state.items, drink.data().strDrink],
+          });
+        });
+      });
   }
 
-  render()
-  {
+  render() {
     return (
-      <section  className="md:flex md:flex-wrap md:inline-block">
+      <section className="md:flex md:flex-wrap md:inline-block">
         {this.state.items &&
           this.state.items.map((categorie, index) => (
-              <div className="sort h-80 
-              md:w-1/2 " 
-              key={index}>
-                {categorie.strDrink ? (
-                  <DrinkTile key={index} content={categorie} />
-                ) : (
-                  <MainTile key={index} name={categorie} />
-                )}
-              </div>
+            <div
+              className="sort h-80 
+              md:w-1/2 "
+              key={index}
+            >
+              {categorie.strDrink ? (
+                <DrinkTile key={index} content={categorie} />
+              ) : (
+                <MainTile key={index} name={categorie} />
+              )}
+            </div>
           ))}
       </section>
     );
