@@ -1,21 +1,27 @@
 /* MAIN TILES */
 
-.sort:nth-child(6n-5) {
+.sort:nth-child(6n-5),
+.upload-input:nth-child(6n-5) {
   @apply bg-light-blue;
 }
-.sort:nth-child(6n-4) {
+.sort:nth-child(6n-4),
+.upload-input:nth-child(6n-4) {
   @apply bg-purple;
 }
-.sort:nth-child(6n-3) {
+.sort:nth-child(6n-3),
+.upload-input:nth-child(6n-3) {
   @apply bg-red;
 }
-.sort:nth-child(6n-2) {
+.sort:nth-child(6n-2),
+.upload-input:nth-child(6n-2) {
   @apply bg-yellow;
 }
-.sort:nth-child(6n-1) {
+.sort:nth-child(6n-1),
+.upload-input:nth-child(6n-1) {
   @apply bg-violet;
 }
-.sort:nth-child(6n-0) {
+.sort:nth-child(6n-0),
+.upload-input:nth-child(6n-0) {
   @apply bg-green;
 }
 
@@ -24,4 +30,9 @@
 }
 .direction:nth-child(even) {
   flex-direction: row;
+}
+
+.upload-input {
+  @apply block mb-4 px-2 py-1 w-full
+  ;
 }
