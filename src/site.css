@@ -27,18 +27,18 @@
 
 /* DrinkTiles */
 
-.direction:nth-child(odd) {
+.direction.reverse:nth-child(odd) {
   flex-direction: row-reverse;
 }
-.direction:nth-child(even) {
+.direction.reverse:nth-child(even) {
   flex-direction: row;
 }
 
-.direction:nth-child(odd) div {
+.direction:nth-child(odd) .drink-tile div {
   flex-direction: row-reverse;
 }
 
-.direction:nth-child(even) div {
+.direction:nth-child(even) .drink-tile div {
   flex-direction: row;
 }
 
