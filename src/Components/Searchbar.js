@@ -28,7 +28,7 @@ class Searchbar extends Component
           <input className="bg-white rounded-lg  text-center py-2"
             type="text"
             name="search"
-            value="type drink name"
+            placeholder="type drink name"
             size="15"
           // onChange={(e) => this.setKeyword(e.target.value)}
           ></input>
