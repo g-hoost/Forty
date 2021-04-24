@@ -11,15 +11,18 @@ import Grid from "./Components/Grid";
 import Header from "./Components/Header";
 import Menu from "./Components/Menu";
 
-class App extends Component {
-  constructor(props) {
+class App extends Component
+{
+  constructor(props)
+  {
     super(props);
     this.state = {
       categories: ["Gin", "Vodka", "Rum", "Scotch", "Alkoholfrei", "Zufall"],
     };
   }
 
-  render() {
+  render()
+  {
     return (
       <Router>
         <Menu />
