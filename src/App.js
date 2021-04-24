@@ -31,7 +31,7 @@ class App extends Component
         <Switch>
           <Route path="/upload">
             <DrinkUpload />
-            <Route path="/search/:search">
+            <Route path="/:search/:search">
               <Searchbar />
             </Route>
           </Route>
