@@ -11,27 +11,24 @@ import Grid from "./Components/Grid";
 import Header from "./Components/Header";
 import Searchbar from "./Components/Searchbar";
 
-class App extends Component
-{
-  constructor(props)
-  {
+class App extends Component {
+  constructor(props) {
     super(props);
     this.state = {
       categories: ["Gin", "Vodka", "Rum", "Scotch", "Alkoholfrei", "Zufall"],
     };
   }
 
-  render()
-  {
+  render() {
     return (
       <Router>
         <Header />
         <Switch>
           <Route path="/upload">
             <DrinkUpload />
-            <Route path="/:search/:search">
-              <Searchbar />
-            </Route>
+          </Route>
+          <Route path="/search/:searchTerm">
+            <Grid key={3} />
           </Route>
           <Route path="/Zufall">
             <DrinkDetailPage />
