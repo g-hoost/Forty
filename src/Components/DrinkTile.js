@@ -11,11 +11,13 @@ const DrinkTile = (props) =>
                     to={`${currentURL}/${props.content.idDrink}`}>
         <div className="flex h-full items-center">
           <div className="w-1/3 ">
-            <h2 className="w-48 transform -rotate-90 -translate-x-8 font-bold text-2xl
+            <h2 className="w-48 transform -rotate-90 -translate-x-8 font-bold text-2xl text-center
             md:-translate-x-4 md:origin-center ">
             {props.content.strDrink}</h2>
           </div>
-          <img className="w-2/3 p-6 object-contain" src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
+          <div className="p-6">
+            <img src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
+          </div>
         </div>
     </Link>
   );

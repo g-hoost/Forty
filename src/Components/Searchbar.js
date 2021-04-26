@@ -29,11 +29,6 @@ const Searchbar = () => {
         >
           Search
         </button>
-        <Link to="/upload">
-          <button className="md:bg-light-blue md:rounded-lg md:px-2 md:py-2 md:ml-4 ">
-            My own cocktail
-          </button>
-        </Link>
       </form>
     </article>
   );
