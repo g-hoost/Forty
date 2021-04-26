@@ -2,21 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { searchCocktail } from "../CocktailAPI";
 
-const Searchbar = () =>
-{
+const Searchbar = () => {
   let textInput = React.createRef();
+  let domain = location.href;
 
-  const submitSearch = (event) =>
-  {
+  const submitSearch = (event) => {
     event.preventDefault();
     location.href += "search/" + textInput.current.value;
-    console.log(location.hostname);
   };
 
   return (
     <article>
       <form>
-        <input className="bg-white rounded-lg text-center py-2 px-2"
+        <input
+          className="bg-white rounded-lg text-center py-2 px-2"
           type="text"
           name="search"
           placeholder="type drink name"
@@ -30,7 +29,6 @@ const Searchbar = () =>
         >
           Search
         </button>
-        <Link to="/search"><button onClick={e => setTerm(e.target.value)} className="bg-light-blue rounded-lg px-2 py-2 ml-4">Search</button></Link>
       </form>
     </article>
   );

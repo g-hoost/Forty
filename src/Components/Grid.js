@@ -1,6 +1,7 @@
 import {
   getAllDrinksByCategory,
   searchNonAlcoholiCocktail,
+  searchCocktail,
 } from "./../CocktailAPI.js";
 
 import { Component } from "react";
@@ -26,10 +27,16 @@ class Grid extends Component {
         this.setState({ items: result.drinks })
       );
     } else if (window.location.href.indexOf("search") != -1) {
-      searchNonAlcoholiCocktail().then((result) =>
+      let positionOfSlash =
+        window.location.pathname.substring(1).indexOf("/") + 2;
+      let lenghtOfUrl = window.location.pathname.substring(1).length + 2;
+      let searchTerm = window.location.pathname.slice(
+        positionOfSlash,
+        lenghtOfUrl
+      );
+      searchCocktail(searchTerm).then((result) =>
         this.setState({ items: result.drinks })
       );
-      console.log("auf der search seite");
     } else {
       getAllDrinksByCategory(urlCategory).then((result) =>
         this.setState({ items: result.drinks })
@@ -53,7 +60,10 @@ class Grid extends Component {
         {this.state.items &&
           this.state.items.map((item, index) => (
             <div
-              className={"sort h-80 content-center flex direction md:w-1/2" + (item.strDrink ? ' reverse' : '')}
+              className={
+                "sort h-80 content-center flex direction md:w-1/2" +
+                (item.strDrink ? " reverse" : "")
+              }
               key={index}
             >
               {item.strDrink ? (
