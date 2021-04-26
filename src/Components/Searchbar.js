@@ -8,7 +8,7 @@ const Searchbar = () => {
 
   const submitSearch = (event) => {
     event.preventDefault();
-    location.href == domain + "search/" + textInput.current.value;
+    location.href += "search/" + textInput.current.value;
   };
 
   return (
