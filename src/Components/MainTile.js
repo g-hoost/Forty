@@ -6,7 +6,7 @@ const MainTile = (props) =>
     <Link to={`/${props.name}`}>
         <section className="pt-28 pl-12">
           <h1 className="font-secondary text-5xl font-bold">{props.name}</h1>
-          <p className="leading-5">LOREM BLA BLA</p>
+          <p className="leading-5 uppercase">Lorem Ipsum</p>
         </section>
     </Link>
   );
