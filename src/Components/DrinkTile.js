@@ -16,7 +16,7 @@ const DrinkTile = (props) =>
             {props.content.strDrink}</h2>
           </div>
           <div className="p-6 h-full">
-            <img className="h-full" src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
+            <img className="h-full object-cover" src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
           </div>
         </div>
     </Link>
