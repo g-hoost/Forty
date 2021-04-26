@@ -19,13 +19,17 @@ class Grid extends Component {
 
   componentDidMount() {
     const urlCategory = this.props.match.params.category;
-
     if (this.props.content) {
       this.setState({ items: this.props.content });
     } else if (urlCategory == "Alkoholfrei") {
       searchNonAlcoholiCocktail().then((result) =>
         this.setState({ items: result.drinks })
       );
+    } else if (window.location.href.indexOf("search") != -1) {
+      searchNonAlcoholiCocktail().then((result) =>
+        this.setState({ items: result.drinks })
+      );
+      console.log("auf der search seite");
     } else {
       getAllDrinksByCategory(urlCategory).then((result) =>
         this.setState({ items: result.drinks })
