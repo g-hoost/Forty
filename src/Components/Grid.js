@@ -1,6 +1,7 @@
 import {
   getAllDrinksByCategory,
   searchNonAlcoholiCocktail,
+  searchCocktail,
 } from "./../CocktailAPI.js";
 
 import { Component } from "react";
@@ -26,7 +27,14 @@ class Grid extends Component {
         this.setState({ items: result.drinks })
       );
     } else if (window.location.href.indexOf("search") != -1) {
-      searchNonAlcoholiCocktail().then((result) =>
+      let positionOfSlash =
+        window.location.pathname.substring(1).indexOf("/") + 2;
+      let lenghtOfUrl = window.location.pathname.substring(1).length + 2;
+      let searchTerm = window.location.pathname.slice(
+        positionOfSlash,
+        lenghtOfUrl
+      );
+      searchCocktail(searchTerm).then((result) =>
         this.setState({ items: result.drinks })
       );
     } else {
