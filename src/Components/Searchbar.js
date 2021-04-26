@@ -1,12 +1,13 @@
-import React, { Component, useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { searchCocktail } from "../CocktailAPI";
-import axios from "axios";
 
-const Searchbar = () => {
+const Searchbar = () =>
+{
   let textInput = React.createRef();
 
-  const submitSearch = (event) => {
+  const submitSearch = (event) =>
+  {
     event.preventDefault();
     location.href += "search/" + textInput.current.value;
     console.log(location.hostname);
