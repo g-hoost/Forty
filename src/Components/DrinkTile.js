@@ -1,17 +1,26 @@
 import { Link } from "react-router-dom";
 import DrinkDetailPage from "./DrinkDetailPage";
+import db from "./../services/firebase";
 
 const DrinkTile = (props) => {
   const currentURL = window.location.pathname;
-  if (props.content.drinkFromDb == true) {
-    console.log(props.content.drinkFromDb);
-  }
+  // if (props.content.drinkFromDb == true) {
+  //   db.collection("Gin")
+  //     .get()
+  //     .then((res) => {
+  //       res.docs.forEach((drink) => {
+  //         // console.log(drink.data().strDrink);
+  //         props.content.idDrink = drink.data().strDrink;
+  //       });
+  //     });
+  //   // props.content.idDrink = drink.data().;
+  // }
 
   return (
     <Link
       className="drink-tile
                     md:flex md:flex-wrap md:inline-block "
-      to={`${currentURL}/${props.content.idDrink}`}
+      to={`/drinks/${props.content.idDrink}`}
     >
       <div className="flex h-full items-center">
         <div className="w-1/3 ">
