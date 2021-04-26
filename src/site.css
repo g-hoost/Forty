@@ -1,4 +1,4 @@
-/* BG-COLORING*/
+/* bg-coloring*/
 
 .sort:nth-child(6n-5),
 .upload-input:nth-child(6n-5) {
@@ -27,25 +27,22 @@
 
 /* DrinkTiles */
 
-.direction:nth-child(odd) {
+.direction.reverse:nth-child(odd) {
   flex-direction: row-reverse;
 }
-.direction:nth-child(even) {
+.direction.reverse:nth-child(even) {
   flex-direction: row;
 }
 
-.direction:nth-child(odd) div {
+.direction:nth-child(odd) .drink-tile div {
   flex-direction: row-reverse;
 }
 
-.direction:nth-child(even) div {
+.direction:nth-child(even) .drink-tile div {
   flex-direction: row;
 }
 
 /* Upload */
 .upload-input {
-  @apply block mb-4 px-2 py-1 w-full;
-}
-input::placeholder {
-  @apply text-dark-blue;
+  @apply block mb-4 px-2 py-1 w-full placeholder-dark-blue;
 }

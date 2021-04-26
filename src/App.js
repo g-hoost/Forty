@@ -9,7 +9,6 @@ import DrinkUpload from "./Components/DrinkUpload";
 import Footer from "./Components/Footer";
 import Grid from "./Components/Grid";
 import Header from "./Components/Header";
-import Menu from "./Components/Menu";
 import Searchbar from "./Components/Searchbar";
 
 class App extends Component {
@@ -23,7 +22,6 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Menu />
         <Header />
         <Switch>
           <Route path="/upload">
