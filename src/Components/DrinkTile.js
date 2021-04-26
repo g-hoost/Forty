@@ -7,16 +7,16 @@ const DrinkTile = (props) =>
   
   return (
     <Link className="drink-tile
-                    md:flex md:flex-wrap md:inline-block " 
+                    flex flex-wrap inline-block " 
                     to={`${currentURL}/${props.content.idDrink}`}>
         <div className="flex h-full items-center">
           <div className="w-1/3 ">
             <h2 className="w-48 transform -rotate-90 -translate-x-8 font-bold text-2xl text-center
-            md:-translate-x-4 md:origin-center ">
+            md:-translate-x-5 md:origin-center ">
             {props.content.strDrink}</h2>
           </div>
-          <div className="p-6">
-            <img src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
+          <div className="p-6 h-full">
+            <img className="h-full" src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
           </div>
         </div>
     </Link>

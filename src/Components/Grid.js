@@ -49,11 +49,11 @@ class Grid extends Component {
 
   render() {
     return (
-      <section className="md:flex md:flex-wrap">
+      <section className="flex flex-wrap">
         {this.state.items &&
           this.state.items.map((item, index) => (
             <div
-              className={"sort h-80 content-center flex direction md:w-1/2" + (item.strDrink ? ' reverse' : '')}
+              className={"sort w-full h-80 content-center justify-center flex direction md:w-1/2" + (item.strDrink ? ' reverse' : '')}
               key={index}
             >
               {item.strDrink ? (
