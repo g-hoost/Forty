@@ -143,7 +143,7 @@ class DrinkDetailPage extends Component {
           </ul>
           <p className="pt-6">{this.state.item.strInstructionsDE}</p>
           {window.location.pathname == "/Zufall" && (
-            <button onClick={(e) => window.location.reload()}>reload</button>
+            <button className="bg-light-blue text-dark-blue rounded-lg px-2 py-2 mt-4" onClick={(e) => window.location.reload()}>Neu laden</button>
           )}
         </div>
       </section>
