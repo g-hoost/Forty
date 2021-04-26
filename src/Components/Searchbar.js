@@ -4,11 +4,10 @@ import { searchCocktail } from "../CocktailAPI";
 
 const Searchbar = () => {
   let textInput = React.createRef();
-  let domain = location.href;
 
   const submitSearch = (event) => {
     event.preventDefault();
-    location.href += "search/" + textInput.current.value;
+    location.href = location.origin + "/search/" + textInput.current.value;
   };
 
   return (
