@@ -1,15 +1,18 @@
 import { Component } from "react";
 import { getDrinkInfos, getRandomCocktail } from "./../CocktailAPI";
 
-class DrinkDetailPage extends Component {
-  constructor(props) {
+class DrinkDetailPage extends Component
+{
+  constructor(props)
+  {
     super(props);
     this.state = {
       item: {},
     };
   }
 
-  componentDidMount() {
+  componentDidMount()
+  {
     if (window.location.pathname == "/Zufall") {
       getRandomCocktail().then((result) =>
         this.setState({ item: result.drinks[0] })
@@ -28,7 +31,8 @@ class DrinkDetailPage extends Component {
     }
   }
 
-  render() {
+  render()
+  {
     return (
       <section
         className="bg-dark-blue p-10
@@ -40,7 +44,7 @@ class DrinkDetailPage extends Component {
           src={this.state.item.strDrinkThumb}
           alt=""
         />
-        <div classname="md:block">
+        <div className="md:block">
           <h2
             className="font-secondary font-bold text-3xl text-center py-8
                         md:text-left"
