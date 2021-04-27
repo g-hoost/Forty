@@ -26,13 +26,13 @@ const DrinkUpload = () => {
 
   return (
 
-    <article className="bg-dark-blue text-white p-12 text-center
+    <article className="bg-dark-blue text-white p-12 pr-0 text-center
                         md:text-left">
       <h1 className="font-secondary font-bold text-2xl mb-8
                     md:mb-14 md:text-3xl 
                     lg:text-left lg:mb-12
       ">Füge deine eigenen Getränke hinzu!</h1>
-      <section className="md:flex">
+      <section className="md:flex overflow-hidden">
         <form className="text-dark-blue
                         md:w-1/3">
           <input className="upload-input " type="text" placeholder="Name" />
@@ -76,16 +76,14 @@ const DrinkUpload = () => {
           />
         </form>
 
-        <div className="md:w-2/3 md:relative md:w-full md:flex">
-          <div className="md:w-1/2 md:relative">
-            <img className="hidden absolute w-11/12 -right-2 top-10 
-                            md:block " src={image9} alt="" />
-            <img className="hidden absolute w-10/12 -right-2 bottom-32
-                            md:block " 
-                            src={image11} alt="" />
-          </div>
-          <img className="hidden absolute w-2/5 ml-4 -right-12 top-0 right-0
-                          md:w-1/2 md:block " 
+        <div className="hidden p-6 pr-0 md:max-h-auto
+                        md:w-2/3 md:w-full md:grid md:grid-cols-2 md:grid-rows-2 md:gap-8">
+            
+          <img className="md:w-full md:object-cover md:col-start-1 md:row-start-1 md:place-self-end" src={image9} alt="" />
+          <img className="md:w-3/4 md:col-start-1 md:row-start-2 md:justify-self-end" 
+                        src={image11} alt="" />
+         
+          <img className="md:w-full md:block md:col-start-2 md:row-span-2" 
                           src={image10} alt="" />
         </div>
       </section>

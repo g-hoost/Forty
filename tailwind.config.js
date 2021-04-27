@@ -6,7 +6,7 @@ module.exports = {
       'primary': ['Montserrat'],
       'secondary': ['Playfair Display']
     },
-    extend: {
+   extend: {
       colors: {
         'dark-blue':'#262B46',
         'white':'#FFFFFF',
