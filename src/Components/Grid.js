@@ -42,7 +42,7 @@ class Grid extends Component {
         this.setState({ items: result.drinks })
       );
 
-      db.collection("gin")
+      db.collection(urlCategory)
         .get()
         .then((res) => {
           res.docs.forEach((drink) => {
