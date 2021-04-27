@@ -33,7 +33,7 @@ class App extends Component {
           <Route path="/Zufall">
             <DrinkDetailPage />
           </Route>
-          <Route path="/:category/:id">
+          <Route path="/drinks/:id">
             <DrinkDetailPage />
           </Route>
           <Route path="/:category">
