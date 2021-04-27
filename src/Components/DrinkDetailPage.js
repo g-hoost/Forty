@@ -39,7 +39,7 @@ class DrinkDetailPage extends Component
                           md:flex md:gap-12"
       >
         <img
-          className="w-4/6 block mx-auto
+          className="w-4/6 block mx-auto object-contain
                         md:w-1/2"
           src={this.state.item.strDrinkThumb}
           alt=""

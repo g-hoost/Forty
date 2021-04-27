@@ -17,6 +17,7 @@ const DrinkTile = (props) => {
   // }
 
   return (
+
     <Link
       className="drink-tile
                     md:flex md:flex-wrap md:inline-block "
@@ -33,6 +34,7 @@ const DrinkTile = (props) => {
         </div>
         <div className="p-6">
           <img src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
+
         </div>
       </div>
       <img
