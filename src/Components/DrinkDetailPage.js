@@ -36,11 +36,11 @@ class DrinkDetailPage extends Component
     return (
       <section
         className="bg-dark-blue p-10
-                          md:flex md:gap-12"
+                  md:flex md:gap-12"
       >
         <img
           className="w-4/6 block mx-auto object-contain
-                        md:w-1/2"
+                    md:w-1/2"
           src={this.state.item.strDrinkThumb}
           alt=""
         />
