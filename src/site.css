@@ -44,5 +44,5 @@
 
 /* Upload */
 .upload-input {
-  @apply block mb-4 px-2 py-1 w-full placeholder-dark-blue;
+  @apply block mb-4 px-2 py-1 w-full placeholder-dark-blue focus:placeholder-white;
 }
