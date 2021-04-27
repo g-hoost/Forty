@@ -17,7 +17,7 @@ const DrinkTile = (props) => {
   // }
 
   return (
-    <Link className="flex flex-wrap inline-block" to={`${currentURL}/${props.content.idDrink}`}>
+    <Link className="drink-tile flex flex-wrap inline-block" to={`${currentURL}/${props.content.idDrink}`}>
         <div className="flex w-full h-full items-center">
           <div className="w-1/3 ">
             <h2 className="w-48 transform -rotate-90 -translate-x-8 font-bold text-2xl text-center
