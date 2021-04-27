@@ -61,7 +61,7 @@ class Grid extends Component {
           this.state.items.map((item, index) => (
             <div
 
-              className={"sort w-full h-80 content-center justify-center flex direction md:w-1/2" + (item.strDrink ? ' reverse' : '')}
+              className={"sort w-full md:w-1/2 h-80 content-center flex direction " + (item.strDrink ? ' reverse' : '')}
 
               key={index}
             >
