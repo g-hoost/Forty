@@ -56,7 +56,7 @@ class Grid extends Component {
 
   render() {
     return (
-      <section className="flex flex-wrap">
+      <section className="flex flex-wrap bg-dark-blue">
         {this.state.items &&
           this.state.items.map((item, index) => (
             <div
