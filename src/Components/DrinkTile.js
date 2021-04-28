@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import DrinkDetailPage from "./DrinkDetailPage";
 import db from "./../services/firebase";
 
-const DrinkTile = (props) => {
+const DrinkTile = (props) =>
+{
   const currentURL = window.location.pathname;
   // if (props.content.drinkFromDb == true) {
   //   db.collection("Gin")
