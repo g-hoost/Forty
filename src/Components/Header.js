@@ -9,7 +9,7 @@ const Header = () =>
     <header className="bg-dark-blue p-3">
       <article className="text-sm flex justify-between">
         <Link to="/"><h3 className="font-secondary uppercase"> Forty</h3></Link>
-        <Link to="/upload"><button className="bg-yellow text-dark-blue rounded-lg px-2 py-2 ml-4 ">Upload Cocktail</button></Link>
+        <Link to="/upload"><button className="bg-yellow text-dark-blue rounded-lg px-2 py-2 ml-4 hover:text-white">Upload Cocktail</button></Link>
       </article>
       <section className="mt-24 ml-12 text-left">
         <h1 className="font-secondary text-5xl">Cocktails & Getränke</h1>
