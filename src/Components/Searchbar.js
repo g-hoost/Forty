@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { searchCocktail } from "../CocktailAPI";
 
-const Searchbar = () => {
+const Searchbar = () =>
+{
   let textInput = React.createRef();
 
-  const submitSearch = (event) => {
+  const submitSearch = (event) =>
+  {
     event.preventDefault();
     location.href = location.origin + "/search/" + textInput.current.value;
   };
@@ -21,7 +23,6 @@ const Searchbar = () => {
           size="15"
           ref={textInput}
         ></input>
-
         <button
           onClick={(e) => submitSearch(e)}
           className="bg-light-blue rounded-lg px-2 py-2 ml-4 hover:text-white"
