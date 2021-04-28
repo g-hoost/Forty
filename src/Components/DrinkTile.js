@@ -38,14 +38,6 @@ const DrinkTile = (props) => {
           />
         </div>
       </div>
-      <div className="p-6">
-        <img src={`${props.content.strDrinkThumb}`} alt="Cocktail Img" />
-      </div>
-      <img
-        className="w-2/3 p-6 object-contain"
-        src={`${props.content.strDrinkThumb}`}
-        alt="Cocktail Img"
-      />
     </Link>
   );
 };
