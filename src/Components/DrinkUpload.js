@@ -99,7 +99,7 @@ const DrinkUpload = () => {
         </form>
 
         <div className="hidden p-6 pr-0 md:max-h-auto
-                        md:w-2/3 md:w-full md:grid md:grid-cols-2 md:grid-rows-2 md:gap-8 grid-width">
+                        md:w-2/3 md:w-full md:grid md:grid-cols-2 md:grid-rows-2 md:gap-8 md:grid-width">
             
           <img className="md:w-full md:object-cover md:col-start-1 md:row-start-1 md:place-self-end" src={image9} alt="" />
           <img className="md:w-3/4 md:col-start-1 md:row-start-2 md:justify-self-end" 
