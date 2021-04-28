@@ -4,17 +4,6 @@ import db from "./../services/firebase";
 
 const DrinkTile = (props) => {
   const currentURL = window.location.pathname;
-  // if (props.content.drinkFromDb == true) {
-  //   db.collection("Gin")
-  //     .get()
-  //     .then((res) => {
-  //       res.docs.forEach((drink) => {
-  //         // console.log(drink.data().strDrink);
-  //         props.content.idDrink = drink.data().strDrink;
-  //       });
-  //     });
-  //   // props.content.idDrink = drink.data().;
-  // }
 
   return (
     <Link
