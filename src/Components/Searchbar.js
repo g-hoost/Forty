@@ -14,7 +14,7 @@ const Searchbar = () => {
     <article>
       <form>
         <input
-          className="bg-white rounded-lg text-center py-2 px-2 focus:bg-green focus:placeholder-white text-white"
+          className="bg-white rounded-lg text-center py-2 px-2 focus:bg-light-blue focus:placeholder-white text-white"
           type="text"
           name="search"
           placeholder="type drink name"
