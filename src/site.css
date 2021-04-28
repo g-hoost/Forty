@@ -46,3 +46,7 @@
 .upload-input {
   @apply block mb-4 px-2 py-1 w-full placeholder-dark-blue focus:placeholder-white;
 }
+
+.grid-width {
+  max-width: 830px;
+}
