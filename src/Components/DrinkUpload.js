@@ -92,7 +92,7 @@ const DrinkUpload = () => {
             placeholder="Menge Zutat 3"
           />
           <input
-            className="bg-light-blue text-white font-bold mt-2 py-2 px-20 rounded-2xl w-full"
+            className="bg-light-blue text-dark-blue font-bold mt-2 py-2 px-20 rounded-2xl w-full hover:text-white"
             type="submit"
             placeholder="Submit"
           />
