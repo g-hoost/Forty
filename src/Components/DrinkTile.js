@@ -19,7 +19,7 @@ const DrinkTile = (props) => {
   return (
     <Link
       className="drink-tile flex flex-wrap inline-block"
-      to={`drinks/${props.content.idDrink}`}
+      to={`/drinks/${props.content.idDrink}`}
     >
       <div className="flex w-full h-full items-center">
         <div className="w-1/3 ">
